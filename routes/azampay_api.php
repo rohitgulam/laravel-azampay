@@ -12,7 +12,7 @@ Route::post('/api/v1/Checkout/Callback', function (Request $request) {
         'msisdn' => ['required', 'string'],
         'operator' => ['required', 'string', Rule::in(['Airtel', 'Mpesa', 'Tigo', 'Halopesa', 'Azampesa'])],
         'reference' => ['required', 'string'],
-        'submerchantAcc' => ['required', 'string'],
+        'submerchantAcc' => ['nullable', 'string'],
         'transactionstatus' => ['required', 'string'],
         'utilityref' => ['required', 'string'],
     ]);
